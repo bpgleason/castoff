@@ -1,4 +1,0 @@
-part title:2:[[PT]]
-chapter title:1:[[CT]]
-frontmatter head:1:[[FMH]]
-backmatter head:2:[[BMH]]
