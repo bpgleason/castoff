@@ -106,7 +106,7 @@ public class ModifyElementFrame extends JFrame {
 		if (! newElement.equalsIgnoreCase(elementToModify)) {
 			// destroy and replace...
 			Main.castoffEngine.removeElement(elementToModify);
-			//TODO: add a method to the engine: addElement(Element element)
+			Main.castoffEngine.addElement(elementToModify);
 		}
 	}
 	

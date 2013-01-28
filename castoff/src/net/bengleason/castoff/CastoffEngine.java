@@ -246,6 +246,14 @@ public class CastoffEngine {
 	}
 	
 	/**
+	 * Add a already-constructed element.
+	 * @param element
+	 */
+	public void addElement(Element element) {
+		elementsList.add(element);
+	}	
+	
+	/**
 	 * Returns the castoff including extra pages, rounded down to the nearest
 	 * multiple of 16
 	 * 
@@ -408,7 +416,7 @@ public class CastoffEngine {
 	 * @param element
 	 * @return if Element exists and was removed; otherwise returns false
 	 */
-	public boolean removeElement(Element element) {
+	public boolean removeElement(final Element element) {
 		for (int i = 0; i < elementsList.size(); i++) {
 			if (elementsList.get(i).equalsIgnoreCase(element)){
 				elementsList.remove(i);
@@ -424,7 +432,7 @@ public class CastoffEngine {
 	 * @param keymark
 	 * @return true if keymark exists and was removed; otherwise returns false
 	 */
-	public boolean removeElement(String keymark) {
+	public boolean removeElementByKeymark(String keymark) {
 		for (int i = 0; i < elementsList.size(); i++) {
 			if (elementsList.get(i).getKeymark().equalsIgnoreCase(keymark)) {
 				elementsList.remove(i);
@@ -440,7 +448,7 @@ public class CastoffEngine {
 	 * @param index
 	 * @return true if element existed and was removed; otherwise returns false
 	 */
-	public boolean removeElement(int index) {
+	public boolean removeElementByIndex(int index) {
 		try {
 			elementsList.remove(index);
 			return true;
